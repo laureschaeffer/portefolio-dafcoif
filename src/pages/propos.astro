@@ -1,12 +1,86 @@
 ---
 import Layout from '../layouts/App.astro';
+import { Image } from 'astro:assets';
+import profilImage from '../assets/img/profil.jpg';
+import iconeImage from '../assets/img/icone_1.png';
 ---
 
 <Layout
-	title="A propos"
+	title="Dafcoif - A propos"
 	description="Lorem ipsum dolor sit amet"
 >
 
-<h1>A propos</h1>
+<!-- premiere section description, photo, anecdote -->
+<section class="py-10">
+	<h1 class="titre text-center">A propos</h1>
+
+	<!-- container -->
+	<div class="grid justify-center items-center gap-8 py-20" style={{ gridTemplateColumns: "repeat(2, 40vw)" }}>
+		<p>Je crois que la couleur des cheveux est une forme d'expression personnelle. Mon approche est centrée sur l'écoute et la compréhension de vos désirs, tout en tenant compte de votre carnation, de la forme de votre visage et de votre style de vie. <br>
+		La santé capillaire est primordiale dans mon travail, car une belle couleur commence par des cheveux en bonne santé.</p>
+		<Image src={profilImage} alt="Photo de Daphné" />
+		<div class="flex flex-col items-center justify-center border-solid border-2 border-[#C2A7FF] p-6 gap-6">
+			<h2 class="titre">Daphnée, 'Dafcoif'</h2>
+			<p class="text-center">est une coiffeuse <span class="lavende">créative</span> basée à Strasbourg</p>
+		</div>
+		<div>
+			<Image src={iconeImage} alt="Icone étincelle" />
+			<p class="sous-titre text-center">“Ma coiffure c'est entre du tunning et Kim Kardashian”</p>
+			<Image src={iconeImage} alt="Icone étincelle" class="absolute" style={{ right: "100px" }} />
+		</div>
+	</div>
+</section>
+
+<!-- deuxieme section, bandeau bleu -->
+<div class="flex justify-around my-20 bg-bleu py-5">
+	<!-- card -->
+	<div class="flex flex-col items-center">
+		<span class="titre">5</span>
+		<span>ans de pratique</span>
+	</div>
+	<!-- card -->
+	<div class="flex flex-col items-center">
+		<span class="titre">+500</span>
+		<span>cheveux pimpés</span>
+	</div>
+	<!-- card -->
+	<div class="flex flex-col items-center">
+		<span class="titre">+100</span>
+		<span>clients réguliers</span>
+	</div>
+</div>
+
+<!-- troisième section mes spécialités -->
+<section>
+	<h2 class="titre text-center">Mes spécialités</h2>
+
+	<!-- container cards -->
+	<div class="flex justify-evenly mt-8">
+		<!-- card -->
+		<article class="w-[300px]">
+			<img src="https://placehold.co/300x300" alt="img">
+			<div class="bg-lavende text-black p-4">
+				<h3 class="sous-titre">Balayage</h3>
+				<p>Technique de coloration qui crée un dégradé naturel et lumineux, parfait pour ajouter de la dimension.</p>
+			</div>
+		</article>
+		<!-- card -->
+		<article class="w-[300px]">
+			<img src="https://placehold.co/300x300" alt="img">
+			<div class="bg-lavende text-black p-2">
+				<h3 class="sous-titre">Couleur créative</h3>
+				<p>Des couleurs vibrantes et audacieuses pour ceux qui souhaitent exprimer leur personnalité unique.</p>
+			</div>
+		</article>
+		<!-- card -->
+		<article class="w-[300px]">
+			<img src="https://placehold.co/300x300" alt="img">
+			<div class="bg-lavende text-black p-4">
+				<h3 class="sous-titre">Soins capilaires</h3>
+				<p>Traitements nourrissants et réparateurs pour maintenir la santé et l'éclat de vos cheveux.</p>
+			</div>
+		</article>
+	</div>
+</section>
 
 </Layout>

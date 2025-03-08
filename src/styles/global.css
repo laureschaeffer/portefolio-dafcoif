@@ -9,6 +9,7 @@
 	--blanc-couleur: #F5F5F5;
 	--blanc-lavende-couleur: #EDE5FF;
 	--lavende-couleur: #C2A7FF;
+	--flash-bleu-couleur: #630ACD;
 
 	--titre-font: 'Orbitron', sans-serif;
 	--texte-font: 'Orbit', sans-serif;
@@ -32,7 +33,7 @@
 .sous-titre{
 	font-family: var(--titre-font);
 	font-size: 1.75rem;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .blanc-lavende{
@@ -43,8 +44,16 @@
 	color: var(--lavende-couleur);
 }
 
+.bg-bleu{
+	background-color: var(--flash-bleu-couleur);
+}
+
 .bg-seconde-couleur{
 	background-color: var(--seconde-couleur);
+}
+
+.bg-lavende{
+	background-color: var(--lavende-couleur);
 }
 
 /* ---------nav logo-------- */

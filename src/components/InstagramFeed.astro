@@ -9,11 +9,11 @@ const { data } = await response.json();
 ---
 
 <!-- <div class="grid"> -->
-<div class="flex flex-wrap items-start justify-center gap-20 px-12">
+<div class="flex flex-wrap items-start justify-center gap-x-20 gap-y-8 px-12">
   {data?.map((post:any) => (
     <a href={post.permalink} target="_blank">
       <figure class="cropped-figure">
-        <img src={post.media_url} alt={post.caption ?? 'Instagram post'} class="cropped-img delay-100 hover:opacity-80" />
+        <img src={post.media_url} alt={post.caption ?? 'Instagram post'} class="cropped-img border-solid border-2 border-[#EDE5FF] delay-100 hover:opacity-80" />
         <figcaption class="truncate "> {post.caption ?? ''} </figcaption>
       </figure>
     </a>
