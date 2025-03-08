@@ -55,6 +55,19 @@
     -webkit-text-fill-color: transparent;
 }
 
+/* img insta */
+.cropped-figure{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    overflow: hidden;
+}
+
+.cropped-img{
+	height: 300px;
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;

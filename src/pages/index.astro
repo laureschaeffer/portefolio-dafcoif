@@ -7,6 +7,7 @@ import logoImage from '../assets/img/logo.png';
 import illusCafeImg1 from '../assets/img/illuscafe_1.jpg';
 import illusCafeImg2 from '../assets/img/illuscafe_2.jpg';
 import illusCafeImg3 from '../assets/img/illuscafe_3.jpg';
+import InstagramFeed from '../components/InstagramFeed.astro';
 ---
 
 <Layout
@@ -70,7 +71,7 @@ import illusCafeImg3 from '../assets/img/illuscafe_3.jpg';
 
 <!-- quatrième section prestations -->
 <section class="py-20">
-	<h2 class="sous-titre text-center">Prestations</h2>
+	<h2 class="sous-titre text-center mb-10">Prestations</h2>
 
 	<!-- une ligne -->
 	<div class="flex items-end gap-8 mx-16 px-2 py-6 border-y-2 border-[#EDE5FF]">
@@ -98,5 +99,15 @@ import illusCafeImg3 from '../assets/img/illuscafe_3.jpg';
 		<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos eius voluptates p</span>
 	</div>
 </section>
+
+<!-- section instagram -->
+<section>
+	<h3 class="sous-titre text-center">Instagram</h3>
+	<p class="text-center text-xl underline my-8">
+		<a href="https://www.instagram.com/daf_boy/">@dafboy</a>
+	</p>
+</section>
+<InstagramFeed />
+
 
 </Layout>
