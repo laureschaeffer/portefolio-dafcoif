@@ -15,19 +15,25 @@ import iconeImage from '../assets/img/icone_1.png';
 	<h1 class="titre text-center">A propos</h1>
 
 	<!-- container -->
-	<div class="grid justify-center items-center gap-8 py-20" style={{ gridTemplateColumns: "repeat(2, 40vw)" }}>
-		<p>Je crois que la couleur des cheveux est une forme d'expression personnelle. Mon approche est centrée sur l'écoute et la compréhension de vos désirs, tout en tenant compte de votre carnation, de la forme de votre visage et de votre style de vie. <br>
+	<div class="grid justify-center items-center gap-x-8 gap-y-12 py-16" style={{ gridTemplateColumns: "repeat(2, 40vw)" }}>
+		<p>Je crois que la couleur des cheveux est une forme d'expression personnelle. Mon approche est centrée sur l'écoute et la compréhension de vos désirs, tout en tenant compte de votre carnation, de la forme de votre visage et de votre style de vie. <br><br>
 		La santé capillaire est primordiale dans mon travail, car une belle couleur commence par des cheveux en bonne santé.</p>
 		<Image src={profilImage} alt="Photo de Daphné" />
-		<div class="flex flex-col items-center justify-center border-solid border-2 border-[#C2A7FF] p-6 gap-6">
+		<div class="flex flex-col items-center justify-center border-solid border-2 border-[#C2A7FF] py-8 gap-6">
 			<h2 class="titre">Daphnée, 'Dafcoif'</h2>
 			<p class="text-center">est une coiffeuse <span class="lavende">créative</span> basée à Strasbourg</p>
 		</div>
-		<div>
+		<div class="flex items-start">
 			<Image src={iconeImage} alt="Icone étincelle" />
-			<p class="sous-titre text-center">“Ma coiffure c'est entre du tunning et Kim Kardashian”</p>
-			<Image src={iconeImage} alt="Icone étincelle" class="absolute" style={{ right: "100px" }} />
+			<span class="sous-titre text-center ml-14">“Ma coiffure c'est entre du tunning et Kim Kardashian”</span>
+			<Image src={iconeImage} alt="Icone étincelle" />
 		</div>
+		<!-- <div>
+			<Image src={iconeImage} alt="Icone étincelle" class="w-20 translate-x-1.5 translate-y-5" />
+			<p class="sous-titre text-center ml-14">“Ma coiffure c'est entre du tunning et Kim Kardashian”</p>
+			<Image src={iconeImage} alt="Icone étincelle" class="w-20 translate-y-[-50px]" />
+		</div> -->
+		  
 	</div>
 </section>
 
@@ -59,25 +65,25 @@ import iconeImage from '../assets/img/icone_1.png';
 		<!-- card -->
 		<article class="w-[300px]">
 			<img src="https://placehold.co/300x300" alt="img">
-			<div class="bg-lavende text-black p-4">
+			<div class="bg-lavende text-black p-4 h-[150px]">
 				<h3 class="sous-titre">Balayage</h3>
-				<p>Technique de coloration qui crée un dégradé naturel et lumineux, parfait pour ajouter de la dimension.</p>
+				<p class="text-sm">Technique de coloration qui crée un dégradé naturel et lumineux, parfait pour ajouter de la dimension.</p>
 			</div>
 		</article>
 		<!-- card -->
 		<article class="w-[300px]">
 			<img src="https://placehold.co/300x300" alt="img">
-			<div class="bg-lavende text-black p-2">
+			<div class="bg-lavende text-black p-4 h-[150px]">
 				<h3 class="sous-titre">Couleur créative</h3>
-				<p>Des couleurs vibrantes et audacieuses pour ceux qui souhaitent exprimer leur personnalité unique.</p>
+				<p class="text-sm">Des couleurs vibrantes et audacieuses pour ceux qui souhaitent exprimer leur personnalité unique.</p>
 			</div>
 		</article>
 		<!-- card -->
 		<article class="w-[300px]">
 			<img src="https://placehold.co/300x300" alt="img">
-			<div class="bg-lavende text-black p-4">
+			<div class="bg-lavende text-black p-4 h-[150px]">
 				<h3 class="sous-titre">Soins capilaires</h3>
-				<p>Traitements nourrissants et réparateurs pour maintenir la santé et l'éclat de vos cheveux.</p>
+				<p class="text-sm">Traitements nourrissants et réparateurs pour maintenir la santé et l'éclat de vos cheveux.</p>
 			</div>
 		</article>
 	</div>

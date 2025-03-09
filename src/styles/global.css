@@ -22,6 +22,15 @@
 	color: var(--blanc-couleur);
 }
 
+::-webkit-scrollbar{
+    width: .6rem;
+    background-color: hsl(202, 16%, 15%);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: hsl(202, 16%, 25%);
+}
+
 /* ==================================================REUTILISABLES================================================== */
 .titre{
 	font-family: var(--titre-font);
