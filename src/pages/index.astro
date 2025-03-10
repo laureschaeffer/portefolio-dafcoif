@@ -16,94 +16,86 @@ import InstagramFeed from '../components/InstagramFeed.astro';
 >
 
 <!-- premiere section -->
-<section class="flex flex-row justify-center items-center py-20 w-[80%] m-auto gap-7">
+<section class="w-[90%] mx-auto py-10 flex flex-col-reverse md:flex-row items-center gap-7">
 	<!-- partie de gauche -->
-	<div class="flex flex-col gap-5 flex-1/2">
+	<div class="flex flex-col gap-5 text-center md:text-left md:flex-1">
 		<h1 class="titre">
 			<span class="block text-end">Coiffeuse</span>
 			<span class="block text-center lavende">coloriste</span>
-			<span class="block">à Strasbourg</span>
+			<span class="block text-start">à Strasbourg</span>
 		</h1>
 		<p>
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ab officiis amet asperiores eligendi, tenetur velit maxime soluta, temporibus voluptatibus accusamus ipsum praesentium. A eaque esse vero. Sint, tempore reiciendis!
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ab officiis amet asperiores eligendi, tenetur velit maxime soluta, temporibus voluptatibus accusamus ipsum praesentium.
 		</p>
 		<a href="#" class="underline">En savoir plus sur Daphné</a>
 	</div>
 	<!-- partie de droite -->
-	<div class="flex-1/2">
+	<div class="flex-1 flex justify-center">
 		<Image src={logoImage} alt="Logo dafcoif" />
 	</div>
 </section>
 
 <!-- deuxième section trois card -->
-<div class="flex justify-evenly gap-16 py-20">
+<div class="flex flex-col md:flex-row justify-center gap-8 py-10 px-4">
 	<!-- card -->
-	<div class="flex flex-col justify-evenly items-center px-4 gap-4 h-[150px] bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
+	<div class="flex flex-col items-center p-6 gap-4 bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
 		<i class="fa-solid fa-hand-sparkles text-2xl"></i>
 		<span>Approche personnalisée</span>
-		<!-- <span class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam inventore aspernatur voluptatem </span> -->
 	</div>
 	<!-- card -->
-	<div class="flex flex-col justify-evenly items-center px-4 gap-4 h-[150px] bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
+	<div class="flex flex-col items-center p-6 gap-4 bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
 		<i class="fa-solid fa-scissors text-2xl"></i>
 		<span>Santé capillaire prioritaire</span>
-		<!-- <span class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam inventore aspernatur voluptatem </span> -->
 	</div>
 	<!-- card -->
-	<div class="flex flex-col justify-evenly items-center px-4 gap-4 h-[150px] bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
+	<div class="flex flex-col items-center p-6 gap-4 bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
 		<i class="fa-solid fa-leaf text-2xl"></i>
 		<span>Produits éco-responsables</span>
-		<!-- <span class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam inventore aspernatur voluptatem </span> -->
 	</div>
-
 </div>
 
 <!-- troisieme section illuscafe -->
-<div class="grid justify-center gap-8 mt-20 py-20" style={{ gridTemplateColumns: "repeat(2, 400px)" }}>
+<div class="grid justify-center gap-8 py-10 px-4" id="illuscafe">
 	<Image src={illusCafeImg1} alt="Illustration de la collaboration Illuscafe et Dafcoif" />
-	<div class="flex flex-col items-center justify-center border-solid border-2 border-[#EDE5FF] p-6 gap-6">
+	<div class="flex flex-col justify-center items-center border-2 border-[#EDE5FF] p-6 gap-6">
 		<h2 class="titre lavende">Illuscafe x Dafcoif</h2>
-		<span class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem deserunt eligendi ea. Eius,</span>
+		<span class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
 	</div>
 	<Image src={illusCafeImg2} alt="Illustration de la collaboration Illuscafe et Dafcoif" />
 	<Image src={illusCafeImg3} alt="Illustration de la collaboration Illuscafe et Dafcoif" />
 </div>
 
 <!-- quatrième section prestations -->
-<section class="py-20">
-	<h2 class="sous-titre text-center mb-10">Prestations</h2>
-
-	<!-- une ligne -->
-	<div class="flex items-end gap-8 mx-16 px-2 py-6 border-y-2 border-[#EDE5FF]">
-		<h3 class="text-2xl">Title</h3>
-		<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos eius voluptates p</span>
-	</div>
-	<!-- une ligne -->
-	<div class="flex items-end gap-8 mx-16 px-2 py-6 border-b-2 border-[#EDE5FF]">
-		<h3 class="text-2xl">Title</h3>
-		<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos eius voluptates p</span>
-	</div>
-	<!-- une ligne -->
-	<div class="flex items-end gap-8 mx-16 px-2 py-6 border-b-2 border-[#EDE5FF]">
-		<h3 class="text-2xl">Title</h3>
-		<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos eius voluptates p</span>
-	</div>
-	<!-- une ligne -->
-	<div class="flex items-end gap-8 mx-16 px-2 py-6 border-b-2 border-[#EDE5FF]">
-		<h3 class="text-2xl">Title</h3>
-		<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos eius voluptates p</span>
-	</div>
-	<!-- une ligne -->
-	<div class="flex items-end gap-8 mx-16 px-2 py-6 border-b-2 border-[#EDE5FF]">
-		<h3 class="text-2xl">Title</h3>
-		<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos eius voluptates p</span>
+<section class="py-20 px-4">
+	<h2 class="sous-titre text-center mb-6">Prestations</h2>
+	<div class="space-y-6">
+		<!-- premiere ligne avec border top et bottom -->
+		<div class="flex flex-col py-4 border-y-2 border-[#EDE5FF] md:flex-row md:items-end md:gap-8 md:mx-16">
+			<h3 class="text-2xl">Title</h3>
+			<span>Lorem ipsum dolor sit amet consectetur.</span>
+		</div>
+		<!-- une ligne -->
+		<div class="flex flex-col pb-4 border-b-2 border-[#EDE5FF] md:flex-row md:items-end md:gap-8 md:mx-16">
+			<h3 class="text-2xl">Title</h3>
+			<span>Lorem ipsum dolor sit amet consectetur.</span>
+		</div>
+		<!-- une ligne -->
+		<div class="flex flex-col pb-4 border-b-2 border-[#EDE5FF] md:flex-row md:items-end md:gap-8 md:mx-16">
+			<h3 class="text-2xl">Title</h3>
+			<span>Lorem ipsum dolor sit amet consectetur.</span>
+		</div>
+		<!-- une ligne -->
+		<div class="flex flex-col pb-4 border-b-2 border-[#EDE5FF] md:flex-row md:items-end md:gap-8 md:mx-16">
+			<h3 class="text-2xl">Title</h3>
+			<span>Lorem ipsum dolor sit amet consectetur.</span>
+		</div>
 	</div>
 </section>
 
-<!-- section instagram -->
-<section class="py-20">
-	<h3 class="sous-titre text-center">Instagram</h3>
-	<p class="text-center text-xl underline my-8">
+<!-- section Instagram -->
+<section class="py-10 text-center">
+	<h3 class="sous-titre">Instagram</h3>
+	<p class="text-xl underline my-4">
 		<a href="https://www.instagram.com/daf_boy/">@dafboy</a>
 	</p>
 

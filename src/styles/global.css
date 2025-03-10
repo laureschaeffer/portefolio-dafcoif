@@ -57,6 +57,10 @@
 	background-color: var(--flash-bleu-couleur);
 }
 
+.bg-couleur{
+	background-color: var(--background-couleur);
+}
+
 .bg-seconde-couleur{
 	background-color: var(--seconde-couleur);
 }
@@ -80,6 +84,14 @@
     justify-content: center;
     width: 300px;
     overflow: hidden;
+}
+
+/* ---------- section illuscafe ---------- */
+@media screen and (width >= 768px) {
+	#illuscafe{
+		grid-template-columns: repeat(2, 35vw);
+	}
+	
 }
 
 .cropped-img{
