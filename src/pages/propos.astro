@@ -3,6 +3,10 @@ import Layout from '../layouts/App.astro';
 import { Image } from 'astro:assets';
 import profilImage from '../assets/img/profil.jpg';
 import iconeImage from '../assets/img/icone_1.png';
+
+import balayageImage from '../assets/img/travail_9.jpg';
+import couleurCreativeImg from '../assets/img/travail_2.jpg';
+import coupeAlternativeImg from '../assets/img/travail_6.jpg';
 ---
 
 <Layout
@@ -10,38 +14,36 @@ import iconeImage from '../assets/img/icone_1.png';
 	description="Lorem ipsum dolor sit amet"
 >
 
-<!-- premiere section description, photo, anecdote -->
-<section class="py-10">
+<!-- première section description, photo, anecdote -->
+<section class="py-10 px-4">
 	<h1 class="titre text-center">A propos</h1>
 
 	<!-- container -->
-	<div class="grid justify-center items-center gap-x-8 gap-y-12 py-16" style={{ gridTemplateColumns: "repeat(2, 40vw)" }}>
-		<p>Je crois que la couleur des cheveux est une forme d'expression personnelle. Mon approche est centrée sur l'écoute et la compréhension de vos désirs, tout en tenant compte de votre carnation, de la forme de votre visage et de votre style de vie. <br><br>
-		La santé capillaire est primordiale dans mon travail, car une belle couleur commence par des cheveux en bonne santé.</p>
-		<Image src={profilImage} alt="Photo de Daphné" />
-		<div class="flex flex-col items-center justify-center border-solid border-2 border-[#C2A7FF] py-8 gap-6">
-			<h2 class="titre">Daphnée, 'Dafcoif'</h2>
+	<div class="flex flex-col items-center gap-12 py-10 md:grid md:grid-cols-2 md:gap-8">
+		<p class="text-center md:text-left">
+			Je crois que la couleur des cheveux est une forme d'expression personnelle. Mon approche est centrée sur l'écoute et la compréhension de vos désirs, tout en tenant compte de votre carnation, de la forme de votre visage et de votre style de vie. <br><br>
+			La santé capillaire est primordiale dans mon travail, car une belle couleur commence par des cheveux en bonne santé.
+		</p>
+		<div class="flex justify-center">
+			<Image src={profilImage} alt="Photo de Daphné" />
+		</div>
+		<div class="flex flex-col items-center border-2 border-[#C2A7FF] py-6 px-4 gap-6">
+			<h2 class="titre whitespace-nowrap">Daphnée, 'Dafcoif'</h2>
 			<p class="text-center">est une coiffeuse <span class="lavende">créative</span> basée à Strasbourg</p>
 		</div>
-		<div class="flex items-start">
-			<Image src={iconeImage} alt="Icone étincelle" />
-			<span class="sous-titre text-center ml-14">“Ma coiffure c'est entre du tunning et Kim Kardashian”</span>
-			<Image src={iconeImage} alt="Icone étincelle" />
+		<div class="flex flex-col items-center text-center gap-4">
+			<Image src={iconeImage} alt="Icone étincelle" class="w-8" />
+			<span class="sous-titre">“Ma coiffure c'est entre du tuning et Kim Kardashian”</span>
+			<Image src={iconeImage} alt="Icone étincelle" class="w-8" />
 		</div>
-		<!-- <div>
-			<Image src={iconeImage} alt="Icone étincelle" class="w-20 translate-x-1.5 translate-y-5" />
-			<p class="sous-titre text-center ml-14">“Ma coiffure c'est entre du tunning et Kim Kardashian”</p>
-			<Image src={iconeImage} alt="Icone étincelle" class="w-20 translate-y-[-50px]" />
-		</div> -->
-		  
 	</div>
 </section>
 
-<!-- deuxieme section, bandeau bleu -->
-<div class="flex justify-around my-20 bg-bleu py-5">
+<!-- deuxième section, bandeau bleu -->
+<div class="flex flex-col items-center gap-6 py-6 bg-bleu text-white text-center md:flex-row md:justify-around">
 	<!-- card -->
 	<div class="flex flex-col items-center">
-		<span class="titre">5</span>
+		<span class="titre">7</span>
 		<span>ans de pratique</span>
 	</div>
 	<!-- card -->
@@ -57,33 +59,39 @@ import iconeImage from '../assets/img/icone_1.png';
 </div>
 
 <!-- troisième section mes spécialités -->
-<section>
+<section class="py-20 px-4">
 	<h2 class="titre text-center">Mes spécialités</h2>
 
 	<!-- container cards -->
-	<div class="flex justify-evenly mt-8">
+	<div class="flex flex-col items-center gap-8 mt-8 md:flex-row md:justify-center xl:justify-evenly">
 		<!-- card -->
-		<article class="w-[300px]">
-			<img src="https://placehold.co/300x300" alt="img">
-			<div class="bg-lavende text-black p-4 h-[150px]">
+		<article class="w-full max-w-[300px] flex flex-col items-center">
+			<figure class="cropped-figure">
+				<Image src={balayageImage} alt="exemple balayage" class="cropped-img" />
+			</figure>
+			<div class="flex flex-col justify-center bg-lavende text-black py-4 px-2 w-[300px] h-[170px] text-center" id="specialite__card-content">
 				<h3 class="sous-titre">Balayage</h3>
 				<p class="text-sm">Technique de coloration qui crée un dégradé naturel et lumineux, parfait pour ajouter de la dimension.</p>
 			</div>
 		</article>
 		<!-- card -->
-		<article class="w-[300px]">
-			<img src="https://placehold.co/300x300" alt="img">
-			<div class="bg-lavende text-black p-4 h-[150px]">
+		<article class="w-full max-w-[300px] flex flex-col items-center">
+			<figure class="cropped-figure">
+				<Image src={couleurCreativeImg} alt="exemple couleur créative" class="cropped-img" />
+			</figure>
+			<div class="flex flex-col justify-center bg-lavende text-black py-4 px-2 w-[300px] h-[170px] text-center" id="specialite__card-content">
 				<h3 class="sous-titre">Couleur créative</h3>
 				<p class="text-sm">Des couleurs vibrantes et audacieuses pour ceux qui souhaitent exprimer leur personnalité unique.</p>
 			</div>
 		</article>
 		<!-- card -->
-		<article class="w-[300px]">
-			<img src="https://placehold.co/300x300" alt="img">
-			<div class="bg-lavende text-black p-4 h-[150px]">
-				<h3 class="sous-titre">Soins capilaires</h3>
-				<p class="text-sm">Traitements nourrissants et réparateurs pour maintenir la santé et l'éclat de vos cheveux.</p>
+		<article class="w-full max-w-[300px] flex flex-col items-center">
+			<figure class="cropped-figure">
+				<Image src={coupeAlternativeImg} alt="exemple coupe alternative" class="cropped-img" />
+			</figure>
+			<div class="flex flex-col justify-center bg-lavende text-black py-4 px-2 w-[300px] h-[170px] text-center" id="specialite__card-content">
+				<h3 class="sous-titre">Coupe alternative</h3>
+				<p class="text-sm">Des styles innovants et originaux pour affirmer votre individualité avec audace.</p>
 			</div>
 		</article>
 	</div>

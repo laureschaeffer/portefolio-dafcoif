@@ -20,6 +20,8 @@
 	font-family: var(--texte-font);
 	min-height: 100vh;
 	color: var(--blanc-couleur);
+
+	font-size: 0.9rem;
 }
 
 ::-webkit-scrollbar{
@@ -32,16 +34,17 @@
 }
 
 /* ==================================================REUTILISABLES================================================== */
+
+/* ---------- FONTS ---------- */
 .titre{
 	font-family: var(--titre-font);
-	font-size: 2rem;
+	font-size: 1.7rem;
 	font-weight: 600;
-	letter-spacing: 1.5px;
 }
 
 .sous-titre{
 	font-family: var(--titre-font);
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 }
 
@@ -86,17 +89,12 @@
     overflow: hidden;
 }
 
-/* ---------- section illuscafe ---------- */
-@media screen and (width >= 768px) {
-	#illuscafe{
-		grid-template-columns: repeat(2, 35vw);
-	}
-	
-}
-
 .cropped-img{
 	height: 300px;
 }
+
+
+
 
 .sr-only {
 	border: 0;
@@ -115,3 +113,51 @@
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+
+/* =======================================================BREAKPOINTS======================================================= */
+
+/* ---------- TABLETTE ---------- */
+@media screen and (width >= 768px) {
+	#illuscafe{
+		grid-template-columns: repeat(2, 35vw);
+	}
+	
+}
+
+/* ---------- ENTRE TABLETTE ET ORDI ---------- */
+@media screen and (768px <= width <= 1014px) {
+	.cropped-figure{
+		width: 200px;
+	}
+	
+	.cropped-img{
+		height: 200px;
+	}
+
+	#specialite__card-content{
+		width: 200px !important;
+
+		h3{
+			font-size: 1.15rem;
+		}
+	}
+}
+
+/* ---------- ORDI ---------- */
+@media screen and (width >= 1024px) {
+	#wrapper{
+		font-size: 1.2rem;
+	}
+
+	.titre{
+		font-size: 2rem;
+		letter-spacing: 1.5px;
+	}
+	
+	.sous-titre{
+		font-size: 1.75rem;
+	}
+	
+}
+
