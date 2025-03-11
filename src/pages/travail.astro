@@ -1,10 +1,94 @@
 ---
 import Layout from '../layouts/App.astro';
+import CardTravail from '../components/CardTravail.astro';
+
+// images pour le portefolio
+import travail1 from '../assets/img/travail_1.jpg';
+import travail2 from '../assets/img/travail_2.jpg';
+import travail3 from '../assets/img/travail_3.jpg';
+import travail4 from '../assets/img/travail_4.jpg';
+import travail5 from '../assets/img/travail_5.jpg';
+import travail6 from '../assets/img/travail_6.jpg';
+import travail7 from '../assets/img/travail_7.jpg';
+import travail8 from '../assets/img/travail_8.jpg';
+import travail9 from '../assets/img/travail_9.jpg';
+
+const dataCards = [
+	{
+		imgSrc: travail1,
+		titre: "Titre",
+		description: "Description"
+	},
+	{
+		imgSrc: travail2,
+		titre: "Titre2",
+		description: "Description2"
+	},
+	{
+		imgSrc: travail3,
+		titre: "Titre3",
+		description: "Description3"
+	},
+	{
+		imgSrc: travail4,
+		titre: "Titre4",
+		description: "Description4"
+	},
+	{
+		imgSrc: travail5,
+		titre: "Titre4",
+		description: "Description4"
+	},
+	{
+		imgSrc: travail6,
+		titre: "Titre4",
+		description: "Description4"
+	},
+	{
+		imgSrc: travail7,
+		titre: "Titre4",
+		description: "Description4"
+	},
+	{
+		imgSrc: travail8,
+		titre: "Titre4",
+		description: "Description4"
+	},
+	{
+		imgSrc: travail9,
+		titre: "Titre4",
+		description: "Description4"
+	},
+] 
 ---
 
 <Layout
 	title="Mon travail"
 	description="Lorem ipsum dolor sit amet"
 >
+
+<section class="text-center">
+	<div class="bg-[#331858] shadow-xl pt-10 pl-4 pr-4 pb-4" style="background: linear-gradient(rgb(0 0 0 / 20%), rgba(0, 0, 0, 0), rgb(0 0 0 / 20%));">
+		<h1 class="titre">Mon travail</h1>
+		<p class="py-12">Découvrez une sélection de mes travaux de coloration. Chaque chevelure raconte une histoire unique, reflétant la personnalité et les désirs de mes clients.</p>
+		<p>Suivez-moi sur Instagram pour plus de créations <a href="https://www.instagram.com/daf_boy/" target="_blank">@dafboy</a></p>	
+	</div>
+
+	<!-- choix de 9 photos -->
+	<div class="flex justify-center flex-wrap gap-10 mt-10">
+		{
+			dataCards.map((data) => 
+				<CardTravail
+					imgSrc= {data.imgSrc}
+					titre= {data.titre}
+					description= {data.description}
+				/>
+			)
+		}
+	
+	</div>
+
+</section>
+
 
 </Layout>

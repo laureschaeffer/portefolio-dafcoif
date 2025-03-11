@@ -48,6 +48,8 @@
 	font-weight: 500;
 }
 
+/* ---------- COULEURS ---------- */
+
 .blanc-lavende{
 	color: var(--blanc-lavende-couleur);
 }
@@ -78,6 +80,10 @@
 	background: linear-gradient(90deg, hsl(277, 56%, 68%) 0%, hsl(203, 71%, 60%) 100%);
 	background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.active{
+	font-weight: 600;
 }
 
 /* img insta */
@@ -126,7 +132,7 @@
 }
 
 /* ---------- ENTRE TABLETTE ET ORDI ---------- */
-@media screen and (768px <= width <= 1014px) {
+@media screen and (768px <= width <= 1024px) {
 	.cropped-figure{
 		width: 200px;
 	}
