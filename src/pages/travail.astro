@@ -16,48 +16,39 @@ import travail9 from '../assets/img/travail_9.jpg';
 const dataCards = [
 	{
 		imgSrc: travail1,
-		titre: "Titre",
-		description: "Description"
+		titre: "Couleur créative"
 	},
 	{
 		imgSrc: travail2,
-		titre: "Titre2",
-		description: "Description2"
+		titre: "Couleur créative"
 	},
 	{
 		imgSrc: travail3,
-		titre: "Titre3",
-		description: "Description3"
+		titre: "Couleur créative"	
 	},
 	{
 		imgSrc: travail4,
-		titre: "Titre4",
-		description: "Description4"
+		titre: "Balayage"
 	},
 	{
 		imgSrc: travail5,
-		titre: "Titre4",
-		description: "Description4"
+		titre: "Couleur"
 	},
 	{
 		imgSrc: travail6,
-		titre: "Titre4",
-		description: "Description4"
+		titre: "Couleur"
 	},
 	{
 		imgSrc: travail7,
-		titre: "Titre4",
-		description: "Description4"
+		titre: "Couleur"
 	},
 	{
 		imgSrc: travail8,
-		titre: "Titre4",
-		description: "Description4"
+		titre: "Balayage"
 	},
 	{
 		imgSrc: travail9,
-		titre: "Titre4",
-		description: "Description4"
+		titre: "Balayage"
 	},
 ] 
 ---
@@ -71,7 +62,7 @@ const dataCards = [
 	<div class="bg-[#331858] shadow-xl pt-10 pl-4 pr-4 pb-4" style="background: linear-gradient(rgb(0 0 0 / 20%), rgba(0, 0, 0, 0), rgb(0 0 0 / 20%));">
 		<h1 class="titre">Mon travail</h1>
 		<p class="py-12">Découvrez une sélection de mes travaux de coloration. Chaque chevelure raconte une histoire unique, reflétant la personnalité et les désirs de mes clients.</p>
-		<p>Suivez-moi sur Instagram pour plus de créations <a href="https://www.instagram.com/daf_boy/" target="_blank">@dafboy</a></p>	
+		<p>Suivez-moi sur Instagram pour plus de créations <a href="https://www.instagram.com/daf_boy/" target="_blank" class="underline">@daf_boy</a></p>	
 	</div>
 
 	<!-- choix de 9 photos -->
@@ -81,7 +72,6 @@ const dataCards = [
 				<CardTravail
 					imgSrc= {data.imgSrc}
 					titre= {data.titre}
-					description= {data.description}
 				/>
 			)
 		}

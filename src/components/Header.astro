@@ -4,7 +4,7 @@ import HeaderLink from "./HeaderLink.astro"
 ---
 
 <header>
-    <nav class="flex flex-row items-center justify-between px-6 py-4 shadow-xl">
+    <nav class="flex flex-row items-center justify-between px-6 py-4 shadow-xl bg-[#1d053e]">
         <HeaderLink href="/" class="titre logo">Dafcoif</HeaderLink>
         
         <!-- menu burger -->
@@ -28,6 +28,6 @@ import HeaderLink from "./HeaderLink.astro"
     menuToggle.addEventListener('click', () => {
         menu.classList.toggle('hidden');
         menu.classList.toggle('flex');
-        menu.classList.add('bg-couleur');
+        menu.classList.add('bg-[#1d053e]');
     });
 </script>
