@@ -16,7 +16,7 @@
 }
 
 #wrapper{
-	background-color: var(--background-couleur);
+	background-color: #171616;
 	font-family: var(--texte-font);
 	min-height: 100vh;
 	color: var(--blanc-couleur);
@@ -50,24 +50,8 @@
 
 /* ---------- COULEURS ---------- */
 
-.blanc-lavende{
-	color: var(--blanc-lavende-couleur);
-}
-
 .lavende{
 	color: var(--lavende-couleur);
-}
-
-.bg-bleu{
-	background-color: var(--flash-bleu-couleur);
-}
-
-.bg-couleur{
-	background-color: var(--background-couleur);
-}
-
-.bg-seconde-couleur{
-	background-color: var(--seconde-couleur);
 }
 
 .bg-lavende{
@@ -126,7 +110,7 @@
 /* ---------- TABLETTE ---------- */
 @media screen and (width >= 768px) {
 	#illuscafe{
-		grid-template-columns: repeat(2, 35vw);
+		grid-template-columns: repeat(2, 30vw);
 	}
 	
 }
