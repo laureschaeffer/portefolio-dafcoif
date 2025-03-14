@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/App.astro';
 import { Image } from 'astro:assets';
-import logoImage from '../assets/img/logo/logo_1.2.jpeg';
+import logoImage from '../assets/img/logo/logo_1.2.webp';
 
 // illuscafe
 import illusCafeImg1 from '../assets/img/illuscafe_1.jpg';
@@ -31,7 +31,7 @@ import InstagramFeed from '../components/InstagramFeed.astro';
 	</div>
 	<!-- partie de droite -->
 	<div class="flex-1 flex justify-center">
-		<Image src={logoImage} alt="Logo dafcoiff" />
+		<Image src={logoImage} alt="Logo dafcoiff" loading="eager" width={675} height={300} />
 	</div>
 </section>
 
@@ -56,13 +56,13 @@ import InstagramFeed from '../components/InstagramFeed.astro';
 
 <!-- troisieme section illuscafe -->
 <div class="grid justify-center gap-8 py-10 px-4 lg:py-20" id="illuscafe">
-	<Image src={illusCafeImg1} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
+	<Image src={illusCafeImg1} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
 	<div class="flex flex-col justify-center items-center border-2 border-[#EDE5FF] p-6 gap-6">
 		<h2 class="titre lavende">Illuscafe x Dafcoiff</h2>
 		<span class="text-center">Collaboration entre le graphiste Illuscafe et Dafcoiff</span>
 	</div>
-	<Image src={illusCafeImg2} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
-	<Image src={illusCafeImg3} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
+	<Image src={illusCafeImg2} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
+	<Image src={illusCafeImg3} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
 </div>
 
 <!-- quatrième section prestations -->

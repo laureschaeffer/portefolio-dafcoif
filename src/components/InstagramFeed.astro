@@ -1,20 +1,31 @@
 ---
-const response = await fetch('http://localhost:4321/api/instagram');
 
-if (!response.ok) {
-  throw new Error("Erreur lors de la récupération des posts Instagram");
-}
-
-const { data } = await response.json();
+const data  = [
+  {
+    link: "https://www.instagram.com/p/DHGo26dMw-P/?img_index=1",
+    media_url: "src/assets/img/insta/insta_1.webp",
+    caption: "\"Mon nouveau set d'ongles est ma nouvelle personnalité\""
+  },
+  {
+    link: "https://www.instagram.com/p/DB0y9UAM2cA/?img_index=1",
+    media_url: "src/assets/img/insta/insta_2.webp",
+    caption: "\"🦇 October dump 🦇\""
+  },
+  {
+    link: "https://www.instagram.com/p/C_a2-8uMNru/?img_index=1",
+    media_url: "src/assets/img/insta/insta_3.webp",
+    caption: "August dump 💚"
+  },
+]
 ---
 
 <!-- <div class="grid"> -->
 <div class="flex flex-wrap items-start justify-center gap-x-20 gap-y-8 px-12">
   {data?.map((post:any) => (
-    <a href={post.permalink} target="_blank">
+    <a href={post.link} target="_blank">
       <figure class="cropped-figure">
-        <img src={post.media_url} alt={post.caption ?? 'Instagram post'} class="cropped-img border-solid border-2 border-[#EDE5FF] delay-100 hover:opacity-80" />
-        <figcaption class="truncate "> {post.caption ?? ''} </figcaption>
+        <img src={post.media_url} alt={"post instagram dafcoiff"} class="cropped-img border-solid border-2 border-[#EDE5FF] delay-100 hover:opacity-80" width="300px" height="350px" />
+        <figcaption> {post.caption ?? ''} </figcaption>
       </figure>
     </a>
   ))}

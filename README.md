@@ -1,6 +1,6 @@
 # Site vitrine - Dafcoiff
 
-![Logo](src/assets/img/logo/logo_1.2.jpeg)  
+![Logo](src/assets/img/logo/logo_1.2.webp)  
 Illustration de Illuscafé.
 
 Portefolio d'une coiffeuse coloriste créative à Strasbourg.  
