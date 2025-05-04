@@ -7,6 +7,29 @@ import iconeImage from '../assets/img/icone_1.png';
 import balayageImage from '../assets/img/travail_9.jpg';
 import couleurCreativeImg from '../assets/img/travail_2.jpg';
 import coupeAlternativeImg from '../assets/img/travail_6.jpg';
+
+
+// Tableau des spécialités
+const specialites = [
+	{
+	titre: "Balayage",
+	description: "Technique de coloration qui crée un dégradé naturel et lumineux, parfait pour ajouter de la dimension.",
+	image: balayageImage,
+	alt: "exemple balayage",
+	},
+	{
+	titre: "Couleur créative",
+	description: "Des couleurs vibrantes et audacieuses pour ceux qui souhaitent exprimer leur personnalité unique.",
+	image: couleurCreativeImg,
+	alt: "exemple couleur créative",
+	},
+	{
+	titre: "Coupe alternative",
+	description: "Des styles innovants et originaux pour affirmer votre individualité avec audace.",
+	image: coupeAlternativeImg,
+	alt: "exemple coupe alternative",
+	},
+];
 ---
 
 <Layout
@@ -27,11 +50,13 @@ import coupeAlternativeImg from '../assets/img/travail_6.jpg';
 		<div class="flex justify-center">
 			<Image src={profilImage} alt="Photo de Daphné" />
 		</div>
-		<div class="flex flex-col items-center border-2 border-[#C2A7FF] py-6 px-4 gap-6">
+
+		<!-- style ici  -->
+		<div class="card__daf flex flex-col items-center border-2 border-[#C2A7FF] py-6 px-4 gap-6">
 			<h2 class="titre whitespace-nowrap">Daphné, 'Dafcoiff'</h2>
 			<p class="text-center">est une coiffeuse <span class="lavende">créative</span> basée à Strasbourg</p>
 		</div>
-		<div class="flex flex-col items-center text-center gap-4">
+		<div class="card__citation flex flex-col items-center text-center gap-4">
 			<Image src={iconeImage} alt="Icone étincelle" class="w-8" />
 			<span class="sous-titre">“Ma coiffure c'est entre du tuning et Kim Kardashian”</span>
 			<Image src={iconeImage} alt="Icone étincelle" class="w-8" />
@@ -64,37 +89,80 @@ import coupeAlternativeImg from '../assets/img/travail_6.jpg';
 
 	<!-- container cards -->
 	<div class="flex flex-col items-center gap-8 mt-8 md:flex-row md:justify-center xl:justify-evenly">
-		<!-- card -->
-		<article class="w-full max-w-[300px] flex flex-col items-center">
-			<figure class="cropped-figure">
-				<Image src={balayageImage} alt="exemple balayage" class="cropped-img" />
-			</figure>
-			<div class="flex flex-col justify-center bg-lavende text-black py-4 px-2 w-[300px] h-[170px] text-center" id="specialite__card-content">
-				<h3 class="sous-titre">Balayage</h3>
-				<p class="text-sm">Technique de coloration qui crée un dégradé naturel et lumineux, parfait pour ajouter de la dimension.</p>
-			</div>
-		</article>
-		<!-- card -->
-		<article class="w-full max-w-[300px] flex flex-col items-center">
-			<figure class="cropped-figure">
-				<Image src={couleurCreativeImg} alt="exemple couleur créative" class="cropped-img" />
-			</figure>
-			<div class="flex flex-col justify-center bg-lavende text-black py-4 px-2 w-[300px] h-[170px] text-center" id="specialite__card-content">
-				<h3 class="sous-titre">Couleur créative</h3>
-				<p class="text-sm">Des couleurs vibrantes et audacieuses pour ceux qui souhaitent exprimer leur personnalité unique.</p>
-			</div>
-		</article>
-		<!-- card -->
-		<article class="w-full max-w-[300px] flex flex-col items-center">
-			<figure class="cropped-figure">
-				<Image src={coupeAlternativeImg} alt="exemple coupe alternative" class="cropped-img" />
-			</figure>
-			<div class="flex flex-col justify-center bg-lavende text-black py-4 px-2 w-[300px] h-[170px] text-center" id="specialite__card-content">
-				<h3 class="sous-titre">Coupe alternative</h3>
-				<p class="text-sm">Des styles innovants et originaux pour affirmer votre individualité avec audace.</p>
-			</div>
-		</article>
+		
+		{specialites.map(({ titre, description, image, alt }) => (
+			<article class="card__specialite w-full max-w-[300px] flex flex-col items-center">
+				<figure class="cropped-figure">
+					<Image src={image} alt={alt} class="cropped-img" />
+				</figure>
+				<div class="flex flex-col justify-center bg-lavende text-black py-4 px-2 w-[300px] h-[170px] text-center" id="specialite__card-content">
+					<h3 class="sous-titre">{titre}</h3>
+					<p class="text-sm">{description}</p>
+				</div>
+			</article>
+		))}
+
 	</div>
 </section>
+
+<script>
+	import gsap from "gsap";
+	import ScrollTrigger from "gsap/ScrollTrigger";
+  
+	gsap.registerPlugin(ScrollTrigger);
+  
+	// ***********************Daphne, Dafcoiff *********************** 
+	gsap.fromTo(
+		".card__daf",
+		{ opacity: 0, x: -200 },
+		{
+			opacity: 1,
+			x: 0,
+			duration: 1,
+			ease: "power3.inOut",
+			scrollTrigger: {
+				trigger: ".card__daf",
+				start: "top 80%",
+				toggleActions: "play none none reset"
+			}
+		}
+	);
+
+	// ***********************citation *********************** 
+	gsap.fromTo(
+		".card__citation",
+		{ opacity: 0, x: 50 },
+		{
+			opacity: 1,
+			x: 0,
+			duration: 1,
+			delay: 0.5,
+			ease: "power3.inOut",
+			scrollTrigger: {
+				trigger: ".card__citation",
+				start: "top 80%",
+				toggleActions: "play none none reset"
+			}
+		}
+	);
+	
+	// *********************** specialités *********************** 
+	gsap.fromTo(
+		".card__specialite",
+		{ opacity: 0, y: 50 },
+		{
+			opacity: 1,
+			y: 0,
+			duration: 1,
+			ease: "power2",
+			stagger: 0.4,
+			scrollTrigger: {
+				trigger: ".card__specialite",
+				toggleActions: "play none none reset"
+			}
+		}
+	);
+	
+</script>
 
 </Layout>
