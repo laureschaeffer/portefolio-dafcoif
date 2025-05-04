@@ -11,4 +11,4 @@ Portefolio d'une coiffeuse coloriste créative à Strasbourg.
 
 ## Technologie
 
-[![My Skills](https://skillicons.dev/icons?i=astro,vite,tailwind,typescript,npm,figma)](https://skillicons.dev)  
+[![techno](https://skillicons.dev/icons?i=astro,vite,tailwind,typescript,npm,figma)](https://skillicons.dev)  
