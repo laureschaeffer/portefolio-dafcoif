@@ -8,6 +8,21 @@ import illusCafeImg1 from '../assets/img/illuscafe_1.jpg';
 import illusCafeImg2 from '../assets/img/illuscafe_2.jpg';
 import illusCafeImg3 from '../assets/img/illuscafe_3.jpg';
 import InstagramFeed from '../components/InstagramFeed.astro';
+
+
+// tableau deuxieme section
+const cards = [
+    { icon: "fa-hand-sparkles", label: "Approche personnalisée" },
+    { icon: "fa-scissors", label: "Santé capillaire prioritaire" },
+    { icon: "fa-leaf", label: "Produits premium" },
+];
+
+//tableau cards prestations
+const prestations = [
+  { title: "Coupe", description: "Coupe sur tout type de longueur", isFirst: true },
+  { title: "Accompagnement", description: "Conseil personnalisé" },
+  { title: "Couleur", description: "Projet sur mesure, du plus classique au plus créatif" },
+];
 ---
 
 <Layout
@@ -37,53 +52,41 @@ import InstagramFeed from '../components/InstagramFeed.astro';
 
 <!-- deuxième section trois card -->
 <div class="flex flex-col md:flex-row justify-center gap-8 py-10 px-4 lg:py-20">
-	<!-- card -->
-	<div class="flex flex-col items-center p-6 gap-4 bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
-		<i class="fa-solid fa-hand-sparkles text-2xl"></i>
-		<span>Approche personnalisée</span>
-	</div>
-	<!-- card -->
-	<div class="flex flex-col items-center p-6 gap-4 bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
-		<i class="fa-solid fa-scissors text-2xl"></i>
-		<span>Santé capillaire prioritaire</span>
-	</div>
-	<!-- card -->
-	<div class="flex flex-col items-center p-6 gap-4 bg-[#331858]" style={{ boxShadow: "12px 11px #C2A7FF" }}>
-		<i class="fa-solid fa-leaf text-2xl"></i>
-		<span>Produits premium</span>
-	</div>
+    {cards.map((card) => (
+        <div class="flex flex-col items-center p-6 gap-4 bg-[#331858] card__home opacity-0 translate-y-10" style="box-shadow: 12px 11px #C2A7FF;">
+            <i class={`fa-solid ${card.icon} text-2xl`}></i>
+            <span>{card.label}</span>
+        </div>
+    ))}
 </div>
 
 <!-- troisieme section illuscafe -->
-<div class="grid justify-center gap-8 py-10 px-4 lg:py-20" id="illuscafe">
-	<Image src={illusCafeImg1} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
-	<div class="flex flex-col justify-center items-center border-2 border-[#EDE5FF] p-6 gap-6">
+<div class="grid justify-center gap-8 py-10 px-4 lg:py-40" id="illuscafe">
+	<Image src={illusCafeImg1} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" class="card__illuscafe" />
+	<div class="card__illuscafe flex flex-col justify-center items-center border-2 border-[#EDE5FF] p-6 gap-6">
 		<h2 class="titre lavende">Illuscafe x Dafcoiff</h2>
 		<span class="text-center">Collaboration entre le graphiste Illuscafe et Dafcoiff</span>
 	</div>
-	<Image src={illusCafeImg2} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
-	<Image src={illusCafeImg3} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" />
+	<Image src={illusCafeImg2} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" class="card__illuscafe" />
+	<Image src={illusCafeImg3} width={460} height={460} alt="Illustration de la collaboration Illuscafe et Dafcoiff" class="card__illuscafe" />
 </div>
 
 <!-- quatrième section prestations -->
 <section class="py-20 px-4 lg:py-20">
 	<h2 class="sous-titre text-center mb-6">Prestations</h2>
 	<div class="space-y-6">
-		<!-- premiere ligne avec border top et bottom -->
-		<div class="flex flex-col py-4 border-y-2 border-[#EDE5FF] md:flex-row md:items-end md:gap-8 md:mx-16">
-			<h3 class="text-2xl font-bold">Coupe</h3>
-			<span>Coupe sur tout type de longueur</span>
-		</div>
-		<!-- une ligne -->
-		<div class="flex flex-col pb-4 border-b-2 border-[#EDE5FF] md:flex-row md:items-end md:gap-8 md:mx-16">
-			<h3 class="text-2xl font-bold">Accompagnement</h3>
-			<span>Conseil personnalisé</span>
-		</div>
-		<!-- une ligne -->
-		<div class="flex flex-col pb-4 border-b-2 border-[#EDE5FF] md:flex-row md:items-end md:gap-8 md:mx-16">
-			<h3 class="text-2xl font-bold">Couleur</h3>
-			<span>Projet sur mesure, du plus classique au plus créatif</span>
-		</div>
+		{prestations.map((item, index) => {
+		const borderClasses = item.isFirst
+		  ? "border-y-2"
+		  : "border-b-2";
+  
+		return (
+			<div class={`flex flex-col pb-4 md:flex-row md:items-end md:gap-8 md:mx-16 ${borderClasses} border-[#EDE5FF] ${item.isFirst ? 'pt-4' : ''}`}>
+				<h3 class="text-2xl font-bold">{item.title}</h3>
+				<span>{item.description}</span>
+			</div>
+		);
+	  })}
 	</div>
 </section>
 
@@ -98,4 +101,65 @@ import InstagramFeed from '../components/InstagramFeed.astro';
 </section>
 
 
+<script>
+	import gsap from "gsap";
+	import ScrollTrigger from "gsap/ScrollTrigger";
+  
+	gsap.registerPlugin(ScrollTrigger);
+  
+	// ***********************3 cards*********************** 
+	gsap.fromTo(
+		".card__home",
+		{ opacity: 0, y: 40 },
+		{
+			opacity: 1,
+			y: 0,
+			duration: 1,
+			ease: "power2.out",
+			stagger: 0.2,
+			scrollTrigger: {
+				trigger: ".card__home",
+				start: "top 80%",
+				toggleActions: "play none none reset"
+			}
+		}
+	);
+	
+	// ***********************4 cards illuscafe*********************** 
+	gsap.fromTo(
+		".card__illuscafe",
+		{ opacity: 0, y: 40 },
+		{
+			opacity: 1,
+			y: 0,
+			duration: 1,
+			ease: "power2.out",
+			stagger: 0.2,
+			scrollTrigger: {
+				trigger: ".card__illuscafe",
+				start: "top 80%",
+				toggleActions: "play none none reset"
+			}
+		}
+	);
+	
+	// ***********************instagram*********************** 
+	gsap.fromTo(
+		".card__insta",
+		{ opacity: 0, y: 40 },
+		{
+			opacity: 1,
+			y: 0,
+			duration: 1,
+			ease: "power2.out",
+			stagger: 0.2,
+			scrollTrigger: {
+				trigger: ".card__insta",
+				start: "top 80%",
+				toggleActions: "play none none reset"
+			}
+		}
+	);
+	
+</script>
 </Layout>

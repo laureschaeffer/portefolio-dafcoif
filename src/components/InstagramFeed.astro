@@ -1,32 +1,36 @@
 ---
+import { Image } from 'astro:assets';
 
-const data  = [
+import insta1 from "../assets/img/insta/insta_1.webp";
+import insta2 from "../assets/img/insta/insta_2.webp";
+import insta3 from "../assets/img/insta/insta_3.webp";
+
+const data = [
   {
     link: "https://www.instagram.com/p/DHGo26dMw-P/?img_index=1",
-    media_url: "src/assets/img/insta/insta_1.webp",
+    media_url: insta1,
     caption: "\"Mon nouveau set d'ongles est ma nouvelle personnalité\""
   },
   {
     link: "https://www.instagram.com/p/DB0y9UAM2cA/?img_index=1",
-    media_url: "src/assets/img/insta/insta_2.webp",
+    media_url: insta2,
     caption: "\"🦇 October dump 🦇\""
   },
   {
     link: "https://www.instagram.com/p/C_a2-8uMNru/?img_index=1",
-    media_url: "src/assets/img/insta/insta_3.webp",
-    caption: "August dump 💚"
+    media_url: insta3,
+    caption: "\"August dump 💚\""
   },
-]
+];
+
 ---
 
-<!-- <div class="grid"> -->
 <div class="flex flex-wrap items-start justify-center gap-x-20 gap-y-8 px-12">
   {data?.map((post:any) => (
-    <a href={post.link} target="_blank">
+    <a href={post.link} target="_blank" class="card__insta">
       <figure class="cropped-figure">
-        <img src={post.media_url} alt={"post instagram dafcoiff"} class="cropped-img border-solid border-2 border-[#EDE5FF] delay-100 hover:opacity-80" width="300px" height="350px" />
+        <Image src={post.media_url} alt="post instagram dafcoiff" loading="eager" class="cropped-img border-solid border-2 border-[#EDE5FF] delay-100 hover:opacity-80 duration-300" width={300} height={350} />
         <figcaption> {post.caption ?? ''} </figcaption>
       </figure>
     </a>
-  ))}
-</div>
+))}
