@@ -5,7 +5,7 @@ import { $ as $$App } from '../chunks/App_20xDLAZq.mjs';
 import '@astrojs/internal-helpers/path';
 import '@astrojs/internal-helpers/remote';
 import { $ as $$Image } from '../chunks/_astro_assets_wWWMq5Xw.mjs';
-import { t as travail2, a as travail6 } from '../chunks/travail_6_CKl0AfWe.mjs';
+import { t as travail2 } from '../chunks/travail_2_BKPpxcvX.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro("https://example.com");
@@ -62,6 +62,19 @@ const travail5 = new Proxy({"src":"/_astro/travail_5.D-XrVpDk.jpg","width":642,"
 							}
 							if (name === 'fsPath') {
 								return "C:/laragon/www/portefolio-dafcoif/src/assets/img/travail_5.jpg";
+							}
+							
+							return target[name];
+						}
+					});
+
+const travail6 = new Proxy({"src":"/_astro/travail_6.DEVYSzfq.jpg","width":642,"height":856,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/laragon/www/portefolio-dafcoif/src/assets/img/travail_6.jpg";
 							}
 							
 							return target[name];

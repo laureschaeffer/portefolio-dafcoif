@@ -4,24 +4,24 @@ import { Image } from 'astro:assets';
 import profilImage from '../assets/img/profil.jpg';
 import iconeImage from '../assets/img/icone_1.png';
 
-import balayageImage from '../assets/img/travail_9.jpg';
-import couleurCreativeImg from '../assets/img/travail_2.jpg';
-import coupeAlternativeImg from '../assets/img/travail_6.jpg';
+import balayageImage from '../assets/img/travail_2.jpg';
+import couleurCreativeImg from '../assets/img/travail_11.jpg';
+import coupeAlternativeImg from '../assets/img/travail_10.jpg';
 
 
 // Tableau des spécialités
 const specialites = [
 	{
-	titre: "Balayage",
-	description: "Technique de coloration qui crée un dégradé naturel et lumineux, parfait pour ajouter de la dimension.",
-	image: balayageImage,
-	alt: "exemple balayage",
-	},
-	{
 	titre: "Couleur créative",
 	description: "Des couleurs vibrantes et audacieuses pour ceux qui souhaitent exprimer leur personnalité unique.",
 	image: couleurCreativeImg,
 	alt: "exemple couleur créative",
+	},
+	{
+	titre: "Balayage",
+	description: "Technique de coloration qui crée un dégradé naturel et lumineux, parfait pour ajouter de la dimension.",
+	image: balayageImage,
+	alt: "exemple balayage",
 	},
 	{
 	titre: "Coupe alternative",
@@ -44,8 +44,8 @@ const specialites = [
 	<!-- container -->
 	<div class="flex flex-col items-center py-12 gap-12 md:grid md:grid-cols-2 md:py-20 md:px-16">
 		<p class="text-center md:text-left">
-			Je crois que les cheveux sont une forme d'expression personnelle. Mon approche est centrée sur l'écoute et la compréhension de vos désirs, tout en tenant compte de vos habitudes avec vos cheveux. <br><br>
-			La santé capillaire est primordiale dans mon travail, car une belle chevelure commence par des cheveux en bonne santé.
+			"Je crois que les cheveux sont une forme d'expression personnelle. Mon approche est centrée sur l'écoute et la compréhension de vos désirs, tout en tenant compte de vos habitudes avec vos cheveux. <br><br>
+			La santé capillaire est primordiale dans mon travail, car une belle chevelure commence par des cheveux en bonne santé."
 		</p>
 		<div class="flex justify-center">
 			<Image src={profilImage} alt="Photo de Daphné" />
