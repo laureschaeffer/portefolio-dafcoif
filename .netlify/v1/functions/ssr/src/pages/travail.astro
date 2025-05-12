@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/App.astro';
+import CardTravail from '../components/CardTravail.astro';
+
+// images pour le portefolio
+import travail1 from '../assets/img/travail_1.jpg';
+import travail2 from '../assets/img/travail_2.jpg';
+import travail3 from '../assets/img/travail_3.jpg';
+import travail4 from '../assets/img/travail_4.jpg';
+import travail5 from '../assets/img/travail_5.jpg';
+import travail6 from '../assets/img/travail_6.jpg';
+import travail7 from '../assets/img/travail_7.jpg';
+import travail8 from '../assets/img/travail_8.jpg';
+import travail9 from '../assets/img/travail_9.jpg';
+
+const dataCards = [
+	{
+		imgSrc: travail1,
+		titre: "Couleur créative"
+	},
+	{
+		imgSrc: travail2,
+		titre: "Balayage"
+	},
+	{
+		imgSrc: travail3,
+		titre: "Couleur créative"	
+	},
+	{
+		imgSrc: travail4,
+		titre: "Couleur créative"
+	},
+	{
+		imgSrc: travail5,
+		titre: "Couleur"
+	},
+	{
+		imgSrc: travail6,
+		titre: "Balayage"
+	},
+	{
+		imgSrc: travail7,
+		titre: "Couleur"
+	},
+	{
+		imgSrc: travail8,
+		titre: "Couleur"
+	}
+] 
+---
+
+<Layout
+	title="Mon travail"
+	description="Découvrez [Nom du Salon], votre coiffeuse coloriste originale à Strasbourg. Spécialiste des couleurs audacieuses, du balayage sur-mesure et des transformations capillaires uniques. Offrez à vos cheveux une touche de créativité et de style !"
+>
+
+<section class="text-center">
+	<div class="bg-[#331858] shadow-xl pt-10 pl-4 pr-4 pb-4" style="background: linear-gradient(rgb(0 0 0 / 20%), rgba(0, 0, 0, 0), rgb(0 0 0 / 20%));">
+		<h1 class="titre">Mon travail</h1>
+		<p class="py-12">Découvrez une sélection de mes travaux de coloration. Chaque chevelure raconte une histoire unique, reflétant la personnalité et les désirs de mes clients.</p>
+		<p>Suivez-moi sur Instagram pour plus de créations <a href="https://www.instagram.com/daf_boy/" target="_blank" class="underline">@daf_boy</a></p>	
+	</div>
+
+	<!-- choix de 9 photos -->
+	<div class="flex justify-center flex-wrap gap-10 mt-10">
+		{
+			dataCards.map((data) => 
+				<CardTravail
+					imgSrc= {data.imgSrc}
+					titre= {data.titre}
+				/>
+			)
+		}
+	
+	</div>
+
+</section>
+
+
+</Layout>
